@@ -1,0 +1,75 @@
+<div id="content">
+    <!-- Content area -->
+    <div ng-controller="ParksController">
+        <table id="retail">
+            <tr>
+                <td><img ng-src="{{photo.image}}" alt="{{photo.name}}"></td>
+            </tr>
+            <tr>
+                <td id="caption">{{photo.name}}</td>
+            </tr>
+        </table>
+    </div>
+    <h1>Seattle Parks</h1>
+
+    <h2>Kerry Park</h2>
+    <p>Kerry Park is a 1.26-acre public park on Queen Anne Hill. The park is a famous Seattle location for viewing and taking memorable pictures of the magnificent view of the Seattle skyline with Mount Rainier, Elliot Bay, and Bainbridge Island in the background on a clear day. In the middle of the park, people enjoy standing in and crawl around the 15-feet tall steel sculpture called Changing Form.</p>
+    <div ng-controller="KerryParkController">
+        <!-- Trigger the modal with a button -->
+        <p class="modalButton" data-toggle="modal" data-target="#myModal1">Click here to see images</p>
+        <!-- Modal -->
+        <div id="myModal1" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-size">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <input type="button" id="close" name="close" class="close" data-dismiss="modal" value="&times;">
+                        <h4 class="modal-title">{{current_photo.id}} &#47; {{image_number}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img ng-src="{{current_photo.image}}" alt="{{current_photo.name}}">
+
+                    </div>
+                    <div class="modal-footer">
+                        <h4>{{current_photo.name}}</h4>
+                        <input type="button" id="previousButton" name="previousButton" value="Previous Image" ng-click="previous()" ng-hide="previousButton">
+                        <input type="button" id="nextButton" name="nextButton" value="Next Image" ng-click="next()" ng-hide="nextButton">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <h2>Gas Works Park</h2>
+    <p>Gas Works Park is a 19.1-acre public park located on the north edge of Lake Union. The park contains the only remaining coal gasification plant in the country. The giant plant was former Seattle Gas Light Company, which operated from 1906 to 1956. It was bought by the City of Seattle in 1962 and opened to the public in 1975. It was added to the National Register of Historic Places in 2013.</p>
+
+    <p>The park is a large green, grassy mound with the plant sitting next to the mound. The mound, lawns and viewpoint are areas for relaxation, recreation, and enjoying the spectacular view of Seattle around Lake Union.</p>
+    <div ng-controller="GasWorksParkController">
+        <!-- Trigger the modal with a button -->
+        <p class="modalButton" data-toggle="modal" data-target="#myModal2">Click here to see images</p>
+        <!-- Modal -->
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-size">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <input type="button" id="close" name="close" class="close" data-dismiss="modal" value="&times;">
+                        <h4 class="modal-title">{{current_photo.id}} &#47; {{image_number}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img ng-src="{{current_photo.image}}" alt="{{current_photo.name}}">
+
+                    </div>
+                    <div class="modal-footer">
+                        <h4>{{current_photo.name}}</h4>
+                        <input type="button" id="previousButton" name="previousButton" value="Previous Image" ng-click="previous()" ng-hide="previousButton">
+                        <input type="button" id="nextButton" name="nextButton" value="Next Image" ng-click="next()" ng-hide="nextButton">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p id="back"><a ui-sref="app.seattle_attractions" target="_self">Back</a></p>
+    </div>
+</div>

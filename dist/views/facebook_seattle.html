@@ -1,0 +1,45 @@
+<div ng-controller="FacebookController">
+    <div id="rightcontent">
+        <!-- Right content area -->
+        <img ng-src="{{photo.image}}" alt="{{photo.name}}">
+        <div id="imgcaption">{{photo.name}}</div>
+    </div>
+    <div id="leftcontent">
+        <!-- Left content area -->
+        <h1>Facebook, Seattle</h1>
+        <p>Facebook (FB) is an online social networking company founded in 2004. Facebook’s Seattle offices are working on Facebook Messenger, Facebook Platform, developer infrastructure, and cold storage system. Facebook opened its first Seattle office in Downtown Seattle in 2010. It opened its second and third Seattle offices in South Lake Union in May and December 2016, respectively.</p>
+
+        <p>The second Seattle office currently has about 1,000 employees, up from 500 employees in 2016. The second office is 335,000 square feet and has potential to hold about 2,000 employees. The third office, the smallest of the three offices, is 150,000 square feet. The three Seattle offices together occupy 870,000 square feet and can hold roughly 5,000 employees.</p>
+
+        <p>Facebook is currently constructing its largest Seattle office, which is also located in South Lake Union and will open in late 2018.</p>
+
+        <p>Job openings at Facebook can be found at this <a href="https://www.facebook.com/careers/locations/seattle" target="_blank">website</a>.</p>
+        <div>
+            <!-- Trigger the modal with a button -->
+            <p class="modalButton" data-toggle="modal" data-target="#myModal">Click here to see images</p>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-size">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input type="button" id="close" name="close" class="close" data-dismiss="modal" value="&times;">
+                            <h4 class="modal-title">{{current_photo.id}}&nbsp;&#47;&nbsp;{{image_number}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img ng-src="{{current_photo.image}}" alt="{{current_photo.name}}">
+                        </div>
+                        <div class="modal-footer">
+                            <h4 class="modal-title">{{current_photo.name}}</h4>
+                            <input type="button" id="previousButton" name="previousButton" value="Previous Image" ng-click="previous()" ng-hide="previousButton">
+                            <input type="button" id="nextButton" name="nextButton" value="Next Image" ng-click="next()" ng-hide="nextButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="back"><a ui-sref="app.seattle_tech" target="_self">Back</a></p>
+        </div>
+    </div>
+</div>

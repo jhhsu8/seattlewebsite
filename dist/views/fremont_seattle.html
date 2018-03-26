@@ -1,0 +1,45 @@
+<div ng-controller="FremontController">
+    <div id="rightcontent">
+        <!-- Right content area -->
+        <img ng-src="{{photo.image}}" alt="{{photo.name}}">
+        <div id="imgcaption">{{photo.name}}</div>
+    </div>
+    <div id="leftcontent">
+        <!-- Left content area -->
+        <h1>Fremont, Seattle</h1>
+        <p>Fremont is north of Queen Anne and northwest of Lake Union. The Lake Washington Ship Canal divides between Fremont and Queen Anne. Cars, bicycles, and pedestrians go over Fremont Bridge, a 500-feet long double-leaf bascule bridge, to get to the other side. The neighborhood has a total population of about 70,000 and has single-family homes and apartments. The median home value is $950,000.</p>
+
+        <p>Fremont’s central business district is located along the Lake Washington Ship Canal. A growing number of technology companies have their offices in the district, such as Google, Adobe Systems, Tableau Software, and the Allen Institute for Brain Science. Other companies include Theo Chocolate, Hale's Ales brewery, the Fremont Brewing, and Wright Brothers Cycle Works.</p>
+
+        <p>Fremont holds festivals and events every year, such as the Summer Solstice Parade, Oktoberfest, Outdoor Movies, and First Friday Artwalk. Fremont Sunday Street Market is held on each Sunday.</p>
+
+        <p>Home listings within Fremont can be found at <a href="https://www.redfin.com/neighborhood/1042/WA/Seattle/Fremont" target="_blank">Redfin</a> and <a href="https://www.zillow.com/homes/Fremont-Seattle-WA_rb" target="_blank">Zillow</a>.</p>
+        <div>
+            <!-- Trigger the modal with a button -->
+            <p class="modalButton" data-toggle="modal" data-target="#myModal">Click here to see images</p>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-size">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input type="button" id="close" name="close" class="close" data-dismiss="modal" value="&times;">
+                            <h4 class="modal-title">{{current_photo.id}}&nbsp;&#47;&nbsp;{{image_number}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img ng-src="{{current_photo.image}}" alt="{{current_photo.name}}">
+                        </div>
+                        <div class="modal-footer">
+                            <h4 class="modal-title">{{current_photo.name}}</h4>
+                            <input type="button" id="previousButton" name="previousButton" value="Previous Image" ng-click="previous()" ng-hide="previousButton">
+                            <input type="button" id="nextButton" name="nextButton" value="Next Image" ng-click="next()" ng-hide="nextButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="back"><a ui-sref="app.seattle_neighborhoods" target="_self">Back</a></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div ng-controller="VideoController">
+    <h1>Videos about Seattle</h1>
+    <p class="iframe" ng-repeat="video in videos">
+        <iframe width="500" height="300" ng-src="{{video.url | trusted}}" frameborder="0" allowfullscreen></iframe>
+    </p>
+</div>

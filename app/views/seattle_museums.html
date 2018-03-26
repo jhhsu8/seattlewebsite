@@ -1,0 +1,26 @@
+<div id="content">
+    <!-- Content area -->
+    <div ng-controller="MuseumsController">
+        <table id="museum">
+            <tr>
+                <td><img ng-src="{{photo.image}}" alt="{{photo.name}}"></td>
+            </tr>
+            <tr>
+                <td id="caption">{{photo.name}}</td>
+            </tr>
+        </table>
+    </div>
+    <h1>Seattle Museums</h1>
+
+    <h2>Chihuly Garden and Glass</h2>
+    <p><a href="https://www.chihulygardenandglass.com" target="_blank">Chihuly Garden and Glass</a> is a museum exhibiting the works of Dale Chihuly. The museum, which opened on May 21, 2012, is located at the Seattle Center in Downtown Seattle. It consists of the Garden, the Glasshouse, the Interior Exhibits, a 90-seat cafe, a 50-seat theater, and retail and lobby spaces. In the Garden, tree-like and flower-like glass sculptures are standing among the grass and flowers. Inside the Glasshouse is a 100-foot long suspended flower-like glass sculpture hanging from the ceiling. A diverse of colorful glass sculptures are displayed inside the Interior Exhibits.</p>
+
+    <h2>Living Computers: Museum &#43; Labs</h2>
+    <p><a href="http://www.livingcomputers.org" target="_blank">Living Computers: Museum &#43; Labs</a> is a computer museum found by Microsoft co-founder Paul Allen. It is located in the SoDo neighborhood. The museum was opened to the public on October 25, 2012. It displays mainframes, minicomputers, microcomputers and peripherals from the last 50 years. These exhibits show how computers and technology have evolved over the years. Visitors can directly interact with and learn about them.</p>
+
+    <h2>The Future of Flight Aviation Center</h2>
+    <p><a href="https://www.futureofflight.org" target="_blank">The Future of Flight Aviation Center</a> is an aviation museum and education center located in Mukilteo, a waterfront city located 25 miles north of Seattle. The museum gives a 90-minutes tour of the Boeing production facility in which the models 747, 767, 777 and 787 are being built. It has a 28,000-square-foot gallery with plane and plane-related exhibits and displays, a 240-seat theater, a cafe, and shops.</p>
+    <div>
+        <p id="back"><a ui-sref="app.seattle_attractions" target="_self">Back</a></p>
+    </div>
+</div>

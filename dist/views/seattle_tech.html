@@ -1,0 +1,21 @@
+<div ng-controller="TechController">
+    <div id="content"><!-- Content area -->
+        <table id="tech">
+            <tr><td><img ng-src="{{photo.image}}" alt="{{photo.name}}"></td></tr>
+            <tr><td id="caption">{{photo.name}}</td></tr>
+        </table>
+        <h1>Seattle's Growing Tech Sector</h1>
+        <p>Seattle is home to four big tech companies, FAMG, i.e., Facebook, Amazon, Microsoft and Google. In 2017, Facebook's stock went up 51.00%, Amazon 55.17%, Microsoft 36.70%, and Google 33.11%. Amazon’s rapid expansion has attracted other big tech companies to Seattle, such as Apple, Airbnb, Indeed and Dropbox. Since 2014, more than 100 out-of-town tech companies have opened their engineering offices in the Seattle metropolitan area.</p> 
+                    
+        <p>Seattle has become second best tech city in the country, behind only San Francisco. Seattle has seen over a 10% increase in tech-job openings since 2016. This increase surpasses any other major tech cities in the country (see the figure above). Currently, there are about 140,000 tech jobs in Seattle.
+        The new engineering offices are growing to become major players in the Seattle tech community, changing and diversifying the community, and adding competition for tech talent.</p>
+                
+        <p>Seattle's four big tech companies:</p>
+        <div>
+            <p class="button"><a ui-sref="app.amazon_seattle" target="_self">Amazon</a></p>
+            <p class="button"><a ui-sref="app.google_seattle" target="_self">Google</a></p>
+            <p class="button"><a ui-sref="app.facebook_seattle" target="_self">Facebook</a></p>
+            <p class="button"><a ui-sref="app.microsoft_seattle" target="_self">Microsoft</a></p>
+        </div> 
+    </div>
+</div>

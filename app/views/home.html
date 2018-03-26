@@ -1,53 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-3 col-content">
-      <div id="objective"><b><u>Objective</u>
-        <br> To work as a web designer/front-end web developer</b></div>
+<div ng-controller="HomeController">
+    <div id="content">
+        <!-- Content area -->
+        <table id="downtown">
+            <tr>
+                <td><img ng-src="{{photo.image}}" alt="The view of Downtown Seattle"></td>
+            </tr>
+            <tr>
+                <td id="caption">{{photo.name}}</td>
+            </tr>
+        </table>
+        <h1>Seattle - An Overview</h1>
+        <p>This website is to provide tourists and potential migrants from other parts of the country with essential information about the City of Seattle, Washington state. It covers several topics about the city, such as culture, climate, public transportation system, housing, expansion in technology industry, and recreational places.</p>
+
+        <p>Seattle is the largest city in the Pacific Northwest and is nicknamed "The Emerald City". It is surrounded by spectacular views of evergreen trees, lakes, the Cascade mountains in the east, the Olympic mountains in the west, and Mount Rainier in the south. The city is home to various business centers and is one of the greatest cities for arts and culture in the world. The Seattle Symphony is one of the country’s leading symphony orchestras. Pacific Northwest Ballet has the highest per capita attendance in the country. Seattle is also the home of music legends like Nirvana and Pearl Jam.</p>
+
+        <p>Seattle is also the fastest growing economy with the lowest unemployment rate (3.7% in September 2017) in the US. The rapid economic growth is due mostly to the fast expansion of its tech sector, which comprises Microsoft, Amazon, Google, and Facebook. Most prominent is the expansion of Amazon, headquartered in the city. It occupies 19% of all prime office space in the city and added 9,000 jobs to the city in 2015. As a result of the expansion of the tech sector, every other sector expands as well, bringning down unemployment rate and causing a rapid rise in rent and housing prices.</p>
     </div>
-    <div class="col-sm-12 col-md-6 col-content">
-      <div id="contact">
-        <h1> <b>Joanne H. Hsu</b> </h1> Text: (925) 876-2830
-        <br>Email: jhhsu11@gmail.com
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-3 col-content">
-      <a ui-sref="app.courses">
-        <div id="computer">Programming Skills &amp; Computer Science Courses </div>
-      </a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6 col-md-3 col-content">
-      <a ui-sref="app.education">
-        <div class="info">Education &amp; Work Experience</div>
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-3 col-content">
-      <a ui-sref="app.awards">
-        <div class="info">Honors/Awards &amp; Publications</div>
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-3 col-content">
-      <a ui-sref="app.travel">
-        <div class="info">Personal Travel &amp; Travel Budget Calculator</div>
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-3 col-content">
-      <a ui-sref="app.about">
-        <div class="info">About Me</div>
-      </a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-12 col-content">
-      <div style="font-weight: bold; font-size: 1.2em; text-align: center;">
-        <br>This page is created with JavaScript, AngularJS, Bootstrap and HTML/CSS.
-        <br>Web design is my passion.
-        <br>I am: 
-        <br>Creative - Voted as the most creative student at high school
-        <br>Diligent - Top of class at UC Davis and PhD at UC Berkeley
-      </div>
-    </div>
-  </div>
 </div>
-<div style="padding: 20px;"></div>

@@ -1,0 +1,43 @@
+<div ng-controller="QueenAnneController">
+    <div id="rightcontent">
+        <!-- Right content area -->
+        <img ng-src="{{photo.image}}" alt="{{photo.name}}">
+        <div id="imgcaption">{{photo.name}}</div>
+    </div>
+    <div id="leftcontent">
+        <!-- Left content area -->
+        <h1>Queen Anne, Seattle</h1>
+        <p>Queen Anne is an affluent neighborhood west of Lake Union. The neighborhood is located on the highest hill in Seattle. It consists of the sub-neighborhoods of North Queen Anne, West Queen Anne, East Queen Anne and Lower Queen Anne. It has a total population of about 36,000 and approximately 19,000 households. The median home value is $1.1 million. Queen Anne has Queen Anne-style mansion homes, single-family homes, and apartments. The hill was a popular spot for the rich to build their mansions in late 19th and early 20th centuries.</p>
+
+        <p>Queen Anne is home to five public schools, Seattle Pacific University, Kerry Park, restaurants, shops, and businesses. It hosts festivals and events every year, such as Queen Anne Farmers Market, Queen Anne Day, and Queen Anne Fall Family.</p>
+
+        <p>Home listings within Queen Anne can be found at <a href="https://www.redfin.com/neighborhood/2212/WA/Seattle/Queen-Anne" target="_blank">Redfin</a> and <a href="https://www.zillow.com/homes/Queen-Anne-Seattle-WA_rb" target="_blank">Zillow</a>.</p>
+        <div>
+            <!-- Trigger the modal with a button -->
+            <p class="modalButton" data-toggle="modal" data-target="#myModal">Click here to see images</p>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-size">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input type="button" id="close" name="close" class="close" data-dismiss="modal" value="&times;">
+                            <h4 class="modal-title">{{current_photo.id}}&nbsp;&#47;&nbsp;{{image_number}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img ng-src="{{current_photo.image}}" alt="{{current_photo.name}}">
+                        </div>
+                        <div class="modal-footer">
+                            <h4 class="modal-title">{{current_photo.name}}</h4>
+                            <input type="button" id="previousButton" name="previousButton" value="Previous Image" ng-click="previous()" ng-hide="previousButton">
+                            <input type="button" id="nextButton" name="nextButton" value="Next Image" ng-click="next()" ng-hide="nextButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="back"><a ui-sref="app.seattle_neighborhoods" target="_self">Back</a></p>
+        </div>
+    </div>
+</div>

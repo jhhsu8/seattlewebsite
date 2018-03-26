@@ -1,0 +1,44 @@
+<div ng-controller="DowntownController">
+    <div id="rightcontent">
+        <!-- Right content area -->
+        <img ng-src="{{photo.image}}" alt="{{photo.name}}">
+        <div id="imgcaption">{{photo.name}}</div>
+    </div>
+
+    <div id="leftcontent">
+        <!-- Left content area -->
+        <h1>Downtown Seattle</h1>
+        <p>Downtown Seattle is 3 miles from south of Lake Union and is located east of Elliott Bay Waterfront (part of Puget Sound). It is the central business district of Seattle and takes half of the city’s jobs. Several Fortune 500 companies headquartered in Downtown Seattle include Amazon, Starbucks, Nordstrom, and Expeditors International. Downtown Seattle has several cultural institutions, such as Seattle Art Museum, Benaroya Hall (home to the Seattle Symphony), the Paramount, and 5th Avenue Theater. Its major shopping centers are Westlake Center and Pacific Place containing a mix of high-end and regular retailers.</p>
+
+        <p>Downtown Seattle is also home to the landmark Pike Place Market located near the waterfront. Along the waterfront, there are over 20 piers. Waterfront Park is located from Pier 57 to Pier 59. Seattle Great Wheel, a giant Ferris wheel, is at Pier 57. Colman Dock, also called Pier 52, is an important ferry terminal for the two ferry routes that carry both cars and pedestrians across Puget Sound to Bainbridge Island and to Bremerton, Washington.</p>
+
+        <p>Home listings within Downtown Seattle can be found at <a href="https://www.redfin.com/neighborhood/741/WA/Seattle/Downtown-Seattle" target="_blank">Redfin</a> and <a href="https://www.zillow.com/homes/Downtown-Seattle-WA_rb" target="_blank">Zillow</a>.</p>
+        <div>
+            <!-- Trigger the modal with a button -->
+            <p class="modalButton" data-toggle="modal" data-target="#myModal">Click here to see images</p>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-size">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input type="button" id="close" name="close" class="close" data-dismiss="modal" value="&times;">
+                            <h4 class="modal-title">{{current_photo.id}}&nbsp;&#47;&nbsp;{{image_number}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img ng-src="{{current_photo.image}}" alt="{{current_photo.name}}">
+                        </div>
+                        <div class="modal-footer">
+                            <h4 class="modal-title">{{current_photo.name}}</h4>
+                            <input type="button" id="previousButton" name="previousButton" value="Previous Image" ng-click="previous()" ng-hide="previousButton">
+                            <input type="button" id="nextButton" name="nextButton" value="Next Image" ng-click="next()" ng-hide="nextButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="back"><a ui-sref="app.seattle_neighborhoods" target="_self">Back</a></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div ng-controller="AttractionsController">
+    <div id="content"><!-- Content area -->
+        <table id="attraction">
+            <tr><td><img ng-src="{{photo.image}}" alt="{{photo.name}}"></td></tr>
+            <tr><td id="caption">{{photo.name}}</td></tr>
+        </table>
+        <h1>Seattle Attractions</h1>
+        <p>Located in a narrow isthmus between the Puget Sound and Lake Washington, Seattle offers numerous exciting and fun experiences. It has many places for outdoor activities, sightseeing and tours, arts and culture, wildlife viewing, shopping, food experiences, and bike trails. Before you start your day looking for fun activities in the city, it is recommended you wear a good walking pair of shoes because Seattle is a walking city, even though there are bus stops around.</p>
+        
+        <p>Popular places in Seattle to visit are Pike Place Market, Kerry Park, Gas Works Park, Chihuly Garden and Glass, Ballard Locks, and Seattle Center. The city also offers many good restaurants such as Din Tai Fung (Taiwanese), El Camino (Mexican), The Pink Door (Italian), and Pike Place Chowder.</p>
+        
+        <p>Learn more about some of Seattle's popular parks, retails and museums below.</p>
+        <div>
+            <p class="button"><a ui-sref="app.seattle_parks" target="_self">Parks</a></p>
+            <p class="button"><a ui-sref="app.seattle_retails" target="_self">Retails</a></p>
+            <p class="button"><a ui-sref="app.seattle_museums" target="_self">Museums</a></p>
+        </div> 
+    </div>
+</div>

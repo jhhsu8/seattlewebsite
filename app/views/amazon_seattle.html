@@ -1,0 +1,43 @@
+<div ng-controller="AmazonController">
+    <div id="rightcontent">
+        <!-- Right content area -->
+        <img ng-src="{{photo.image}}" alt="{{photo.name}}">
+        <div id="imgcaption">{{photo.name}}</div>
+    </div>
+    <div id="leftcontent">
+        <!-- Left content area -->
+        <h1>Amazon, Seattle</h1>
+        <p>Amazon (AMZN) is an e-commerce and cloud-computing company. Its headquarters is located in South Lake Union, a neighborhood situated between Lake Union and Downtown Seattle. The headquarters currently has 33 office buildings and employs about 40,000 employees, up from 5,000 in 2010. Amazon sells a wide range of products from books to clothes and has a number of its own products and services, such as Kindle, Alexa, AmazonFresh, Amazon Books, Amazon Go, and Amazon Web Services.</p>
+
+        <p>Amazon was started in a garage in Bellevue, Washington in 1994. Today, Amazon has turned Seattle into the biggest company town in the United States. Amazon’s Seattle footprint is 8.1 million square feet and is expected to rise to more than 12 million square feet within five years. It occupies a 19 percent of all office spaces in the Seattle and has as much office space as next Seattle’s 40 biggest employers combined such as Nordstrom, Facebook, University of Washington, and Tableau Software.</p>
+
+        <p>Job openings at Amazon can be found at this <a href="https://www.amazon.jobs/location/seattle-wa" target="_blank">website</a>.</p>
+        <div>
+            <!-- Trigger the modal with a button -->
+            <p class="modalButton" data-toggle="modal" data-target="#myModal">Click here to see images</p>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-size">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input type="button" id="close" name="close" class="close" data-dismiss="modal" value="&times;">
+                            <h4 class="modal-title">{{current_photo.id}}&nbsp;&#47;&nbsp;{{image_number}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img ng-src="{{current_photo.image}}" alt="{{current_photo.name}}">
+                        </div>
+                        <div class="modal-footer">
+                            <h4 class="modal-title">{{current_photo.name}}</h4>
+                            <input type="button" id="previousButton" name="previousButton" value="Previous Image" ng-click="previous()" ng-hide="previousButton">
+                            <input type="button" id="nextButton" name="nextButton" value="Next Image" ng-click="next()" ng-hide="nextButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="back"><a ui-sref="app.seattle_tech" target="_self">Back</a></p>
+        </div>
+    </div>
+</div>

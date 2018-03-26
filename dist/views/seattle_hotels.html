@@ -1,0 +1,12 @@
+<div id="hotels" ng-controller="HotelController">
+    <h1>Affortable Hotels in Seattle</h1>
+    <div>Sort by:&nbsp;</div>
+    <div class="sortbutton" ng-class="{ sort: clickName, unsort: !clickName }" ng-click="sortbyname()">Name</div>
+    <div class="sortbutton" ng-class="{ sort: clickPrice, unsort: !clickPrice }" ng-click="sortbyprice()">Price</div>
+    <div class="sortbutton" ng-class="{ sort: clickRating, unsort: !clickRating }" ng-click="sortbyrating()">Rating</div>
+    <hr>
+    <div ng-repeat="hotel in hotels | orderBy: 'name' | orderBy: sortname : true | orderBy: sortrating: true | orderBy : sortprice">
+        <h2>{{hotel.name}}</h2>
+        <p>From &#36;{{hotel.price}}/night&nbsp;&nbsp;&nbsp;{{hotel.rating}}&star;&nbsp;&nbsp;&nbsp;<a href="{{hotel.link}}" target="_blank">Book here</a></p>
+    </div>
+</div>

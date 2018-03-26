@@ -1,170 +1,260 @@
 body {
-	background-color: #ecf2f9;
-	font-family: 'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
+    background-color: #bdb76b;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
 }
-.title {
-	color: #ffffff;
-	background-color: #5c5c8a;
-	padding: 3px;
-	text-align: center;
+
+/* Body container area */ 
+#bodycontainer {
+    background-color: #d7d7d7;
+    width: 900px;
+    margin-left: 260px;
+    margin-right: 260px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-#awards,#courses,#education,#about {
-	font-size: 1.2em;
-	color: #4d4d4d;
+
+/* Header area */ 
+#header {
+    background-color: #fefdfb;
+    height: 130px;
+    background-image: url(https://i.imgur.com/WoSSoUb.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    font-size: 180%;
 }
-.expenses {
-	width: 200px;
-	height: 130px;
+
+#header p {
+    font-weight: bold;
+    padding-top: 53px;
+    padding-left: 278px;
 }
-.nav-tabs {
-	background-color: #b3b3cc;
+
+.sidenav {
+    height: 100%;
+    margin-left: 160px;
+    width: 100px;
+    background-color: #bdb76b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 200px;
 }
-.media-heading {
-	color: #ffffff;
+
+.sidenav a {
+    padding: 10px;
+    text-decoration: none;
+    color: #2f4f4f;
+    display: block;
+    font-size: 110%;
+    font-weight: bold;
 }
-.media-right {
-	padding-right: 100px;
-	padding-bottom: 10px;
+
+.sidenav a:hover {
+    color: #f1f1f1;
 }
-@media (max-width: 500px) {
-	.media-right img {
-		display:none;
-	}
+
+.iframe {
+    text-align: center;
 }
-.media-body {
-	padding-left: 50px;
-	padding-top: 30px;
+
+iframe {
+    padding: 20px;
 }
-.tab-content {
-	background-color: #5c5c8a;
-	color: #24478f;
+
+#hotels, #parks {
+    padding: 20px;
+}
+
+.sortbutton {
+    cursor: pointer;
+    display: inline-block;
     padding: 5px;
 }
-label[for="cost"] {
-	color: #ffffff;
+
+.sort {
+    text-decoration: underline;
+    font-weight: bold;
 }
-.nav-tabs > li > a {
-	border: none;
-	color: #ffffff;
-	font-size: 1.2em;
+
+.unsort {
+    text-decoration: none;
+    font-weight: normal;
 }
-.nav-tabs > li > a:hover {
-	background-color: #5c5c8a;
-	border: none;
-	border-radius: 0;
-	font-size: 1.2em;
+
+/* Navigation area */ 
+#navigation {
+    background-color: #2f4f4f; 
+    padding: 15px;
+    text-align: center;
 }
-.col-content{
-	padding: 5px;
+
+#navigation a {
+    color: #fff; 
+    padding: 5px;
+    text-decoration: none; 
 }
-#objective {
-	text-align: center;
-	box-shadow: 2px 2px 3px gray;
-	padding: 60px 30px 60px 30px;
-	background-color: #009973;
-	color: #ffffff;
-	width: 280px;
-	height: 300px;
-	display: block;
-	margin: 0 auto;
-	font-size: 1.5em;
+
+#navigation a:hover {
+    background-color: #ff4500;
 }
-#contact {
-	text-align: center;
-	box-shadow: 2px 2px 3px gray;
-	padding: 30px 30px 30px 30px;
-	background-image: url("../images/sunset1.png");
-	color: #ffffff;
-	width: 572px;
-	height: 300px;
-	display: block;
-	margin: 0 auto;
-	font-size: 1.5em;
+
+h1 {
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
 }
-#computer {
-	padding: 60px 30px 60px 30px;
-	box-shadow: 2px 2px 3px gray;
-	color: #ffffff;
-	text-align: center;
-	font-weight: bold;
-	background-color: #009973;
-	width: 280px;
-	height: 300px;
-	display: block;
-	margin: 0 auto;
-	font-size: 1.5em;
+
+h2 {
+    font-size: 130%;
+    font-weight: bold;
 }
-.info {
-	padding: 30px;
-	text-align: center;
-	color: #ffffff;
-	font-weight: bold;
-	background-color: #009973;
-	width: 280px;
-	height: 150px;
-	display: block;
-	margin: 0 auto;
-	box-shadow: 2px 2px 3px gray;
-	font-size: 1.5em;
+
+ul {
+    list-style-type: none;
 }
-#objective:hover,#contact:hover {
-	cursor: default;
-	opacity: 0.8;
-	transition: 0.5s;
+
+/* Modal */
+.modalButton {
+    color: #008b8b;
+    font-weight: bold;
+    display: inline-block;
 }
-#computer:hover,.info:hover {
-	cursor: pointer;
-	opacity: 0.8;
-	transition: 0.5s;
+
+.modalButton:hover {
+    cursor: pointer;
+    color: #006161;
 }
-a:hover, a:active, a:visited{
-	color: #ffffff;
+
+.modal-body {
+    background-color: #2f4f4f;
+    margin-left: auto;
+    margin-right: auto;
 }
-.logo{
-	float:right;
-	width: 50px;
-	height:50px;
+
+.modal-size {
+    width: 800px;
 }
-.photo, iframe {
-	display: block;
-	margin: auto;
-	width: 550px;
-	height: 330px;
-	box-shadow: 2px 2px 3px gray;
+
+/* One-column layout */
+#content {
+    padding: 10px 20px 10px 20px;
 }
-.total {
-	text-align: center;
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
-.calculation {
-	background-color: #b3b3cc;
-	padding: 10px;
+
+/* Table widths */
+#downtown {
+    width: 574px;
 }
-#clear {
+
+#introduction {
+    width: 448px;
+}
+
+#transportation {
+    width: 378px;
+}
+
+#neighborhoods, #park {
+    width: 444px;
+}
+
+#attraction {
+    width: 442px;
+}
+
+#museum {  
+    width: 416px;
+}
+
+#retail {
+    width: 400px;
+}
+
+#tech {
+    width: 525px;
+}
+
+/* Image caption */
+#caption {
+    font-style: italic;
+    text-align: right;
+}
+
+/* Two-column layout */
+#leftcontent {
+    margin-right: 250px;
+    padding: 0px 20px 10px 20px;
+}
+
+#rightcontent {
     float: right;
+    width: 250px;
 }
-#joanne {
-	display: block;
-	margin: 0 auto;
-	border: 5px solid #5c5c8a;
+
+/* Image caption */
+#imgcaption {
+    font-style: italic;
+    text-align: left;
 }
-legend {
-	font-size: 1.5em;
-	font-weight: bold;
-	color:#5c5c8a;
+
+/* Displaying buttons */
+
+.button a, #back a {
+    text-decoration: none;
+    color: #fff;
 }
-fieldset{
-	color: #4d4d4d;
+
+.button:hover, #back:hover{
+    text-decoration: underline;
 }
-#age {
-	width: 50px;
+
+.button, #back {
+    color: #fff;
+    background-color: #008b8b;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right:10px;
+    margin: 20px; 
 }
-textarea {
-	width: 360px;
-	height: 50px;
+
+#content div, #leftcontent div, #footer p {
+    text-align: center;
 }
-.footlink:hover {
-	color: #3b3b59;
+
+#content > p > a, #leftcontent > p > a, li > a, #hotels a {
+    color: blue;
 }
-.footlink{
-	color: #5c5c8a;
+
+#photo_name {
+    color: #fff;
+}
+
+/* Footer area */
+#footer {
+    background-color: #ededed;
+    clear: both;
+    padding: 20px;
+    text-align: center;
+}
+
+#footer a {
+    color: #5c5c5c;
+}
+
+#home, #previousButton {
+    float: left;
+}
+
+#sitemap, #nextButton {
+    float: right;
 }

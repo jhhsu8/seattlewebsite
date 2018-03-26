@@ -1,0 +1,20 @@
+<div ng-controller="NeighborhoodsController">
+    <div id="content"><!-- Content area -->
+        <!-- Trigger the modal -->
+        <table id="neighborhoods">
+            <tr><td><img ng-src="{{photo.image}}" alt="{{photo.name}}"></td></tr>
+            <tr><td id="caption">{{photo.name}}</td></tr>
+        </table>
+        <h1>Seattle Neighborhoods</h1>
+        <p>Seattle has over 120 neighborhoods. The city was found in mid-19th century during an economic boom driven by the timber industry. Under the city’s rapid expansion and development, residences were built in clusters scattered throughout the city. These clusters, or neighborhoods, were further strengthened by the presence of  local community clubs, public libraries, public schools, and public parks. These local institutions have created a sense of community, promoted distinctiveness, and defined the character within neighborhoods.</p>
+                
+        <p>Today, many people move to Seattle neighborhoods close to high tech companies that are concentrated in South Lake Union/Downtown Seattle. Many of these neighborhoods surround Lake Union, a 580-acres freshwater lake virtually in the center of Seattle (see the figure above). The Queen Anne neighborhood is on the west side of the lake. The South Lake Union neighborhood is on the south side of the lake, hence the name. The Fremont neighborhood is on the northwest side of the lake. The Capitol Hill neighborhood is on the east side of the lake. Downtown Seattle is just south of South Lake Union.</p>
+                
+        <p>Learn about Seattle's three neighborhoods below.</p>
+        <div>
+            <p class="button"><a ui-sref="app.queen_anne_seattle" target="_self">Queen Anne</a></p>
+            <p class="button"><a ui-sref="app.fremont_seattle" target="_self">Fremont</a></p>
+            <p class="button"><a ui-sref="app.downtown_seattle" target="_self">Downtown Seattle</a></p>
+        </div>
+    </div>
+</div>
