@@ -1,0 +1,25 @@
+<div class="container" ng-controller="CommentController" id="comments">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <form style="width: 50%;">
+                <fieldset class="form-group">
+                    <legend>{{comment_length}} Comments:</legend>
+                    <div ng-repeat="comment in usercomments">
+                        <blockquote>
+                            <div style="font-size: 20px; color: darkblue;">
+                                <b>{{comment.name}}</b></div>
+                            &nbsp;&nbsp;&nbsp;<span>{{comment.comment}}</span>
+                            <button type="button" class="close" ng-click="remove($index)">&times;</button>
+                            <small>{{comment.date| date}} </small>
+                        </blockquote>
+                    </div>
+                    <input class="form-control" type="text" ng-model="input.name" id="name" name="name" placeholder="Enter Your Name">
+                    <textarea class="form-control" rows="4" cols="70" ng-model="input.comment" id="comment" name="comment" placeholder="Enter Your Comment"></textarea>
+                    <button type="submit" ng-click="submitComment()" class="btn btn-primary">Submit</button>
+                    <span ng-show="enter_comment">Please enter your name or comment</span>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<div style="padding:20px;"></div>

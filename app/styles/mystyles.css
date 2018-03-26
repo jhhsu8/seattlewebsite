@@ -1,0 +1,170 @@
+body {
+	background-color: #ecf2f9;
+	font-family: 'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
+}
+.title {
+	color: #ffffff;
+	background-color: #5c5c8a;
+	padding: 3px;
+	text-align: center;
+}
+#awards,#courses,#education,#about {
+	font-size: 1.2em;
+	color: #4d4d4d;
+}
+.expenses {
+	width: 200px;
+	height: 130px;
+}
+.nav-tabs {
+	background-color: #b3b3cc;
+}
+.media-heading {
+	color: #ffffff;
+}
+.media-right {
+	padding-right: 100px;
+	padding-bottom: 10px;
+}
+@media (max-width: 500px) {
+	.media-right img {
+		display:none;
+	}
+}
+.media-body {
+	padding-left: 50px;
+	padding-top: 30px;
+}
+.tab-content {
+	background-color: #5c5c8a;
+	color: #24478f;
+    padding: 5px;
+}
+label[for="cost"] {
+	color: #ffffff;
+}
+.nav-tabs > li > a {
+	border: none;
+	color: #ffffff;
+	font-size: 1.2em;
+}
+.nav-tabs > li > a:hover {
+	background-color: #5c5c8a;
+	border: none;
+	border-radius: 0;
+	font-size: 1.2em;
+}
+.col-content{
+	padding: 5px;
+}
+#objective {
+	text-align: center;
+	box-shadow: 2px 2px 3px gray;
+	padding: 60px 30px 60px 30px;
+	background-color: #009973;
+	color: #ffffff;
+	width: 280px;
+	height: 300px;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+#contact {
+	text-align: center;
+	box-shadow: 2px 2px 3px gray;
+	padding: 30px 30px 30px 30px;
+	background-image: url("../images/sunset1.png");
+	color: #ffffff;
+	width: 572px;
+	height: 300px;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+#computer {
+	padding: 60px 30px 60px 30px;
+	box-shadow: 2px 2px 3px gray;
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+	background-color: #009973;
+	width: 280px;
+	height: 300px;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.info {
+	padding: 30px;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #009973;
+	width: 280px;
+	height: 150px;
+	display: block;
+	margin: 0 auto;
+	box-shadow: 2px 2px 3px gray;
+	font-size: 1.5em;
+}
+#objective:hover,#contact:hover {
+	cursor: default;
+	opacity: 0.8;
+	transition: 0.5s;
+}
+#computer:hover,.info:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	transition: 0.5s;
+}
+a:hover, a:active, a:visited{
+	color: #ffffff;
+}
+.logo{
+	float:right;
+	width: 50px;
+	height:50px;
+}
+.photo, iframe {
+	display: block;
+	margin: auto;
+	width: 550px;
+	height: 330px;
+	box-shadow: 2px 2px 3px gray;
+}
+.total {
+	text-align: center;
+}
+.calculation {
+	background-color: #b3b3cc;
+	padding: 10px;
+}
+#clear {
+    float: right;
+}
+#joanne {
+	display: block;
+	margin: 0 auto;
+	border: 5px solid #5c5c8a;
+}
+legend {
+	font-size: 1.5em;
+	font-weight: bold;
+	color:#5c5c8a;
+}
+fieldset{
+	color: #4d4d4d;
+}
+#age {
+	width: 50px;
+}
+textarea {
+	width: 360px;
+	height: 50px;
+}
+.footlink:hover {
+	color: #3b3b59;
+}
+.footlink{
+	color: #5c5c8a;
+}

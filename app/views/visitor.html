@@ -1,0 +1,62 @@
+<div class="container" id="visitor" ng-controller="VisitorController">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <h3 style="text-align: center; color:#5c5c8a;"><b>Visitor Information</b></h3>
+            <div style="padding:10px;"></div>
+            <form name="visitorForm" novalidate>
+                <fieldset class="form-group">
+                    <legend>Your Photo</legend>
+                    <label for="image" style="width: 150px; vertical-align: top;">Image:</label>
+                    <input type="file" id="trigger" onchange="angular.element(this).scope().setFile(this)" accept="image/*">
+                    <br>
+                    <img class="img-responsive" ng-src="{{image_source}}">
+                    <br>
+                </fieldset>
+                <fieldset class="form-group">
+                    <legend>Your General Details</legend>
+                    <label for="name" style="width: 150px; vertical-align: top;">Name<span style="color:red">&nbsp;*</span></label>
+                    <input type="text" id="name" name="name" ng-model="user.name" placeholder="Enter Your Name" required>
+                    <span style="color:red;" ng-show="visitorForm.name.$dirty && visitorForm.name.$invalid"><span ng-show="visitorForm.name.$error.required">Name is required.</span></span>
+                    <br>
+                    <label style="width: 150px; vertical-align: top;">Gender</label>
+                    <input type="radio" id="gender" name="gender" ng-model="user.male" value="male">
+                    <label for="gender" style="width: auto;">Male</label>
+                    <input type="radio" id="gender" name="gender" ng-model="user.female" value="female">
+                    <label for="gender" style="width: auto;">Female</label>
+                    <br>
+                    <label for="age" style="width: 150px; vertical-align: top;">Age</label>
+                    <input type="number" min="0" step="1" value="0" ng-model="user.age" id="age" name="age">
+                    <br>
+                    <label for="region" style="width: 150px; vertical-align: top;">Region</label>
+                    <select ng-model="selectedRegion">
+                        <option ng-repeat="region in regions" value="{{region}}">{{region}}</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <legend>Your Contact Information</legend>
+                    <label for="email" style="width: 150px; vertical-align: top;">Email<span style="color:red;">&nbsp;*</span></label>
+                    <input type="email" id="email" name="email" ng-model="user.email" placeholder="Enter Your Email" required>
+                    <span style="color:red" ng-show="visitorForm.email.$dirty && visitorForm.email.$invalid"><span ng-show="visitorForm.email.$error.required">Email is required.</span>
+                    <span ng-show="visitorForm.email.$error.email">Invalid email address.</span>
+                    </span>
+                    <br>
+                    <label for="phone" style="width: 150px; vertical-align: top;">Mobile</label>
+                    <input type="tel" id="phone" name="phone" ng-model="user.phone" placeholder="Enter Your Number">
+                    <br>
+                    <label style="width: 150px; vertical-align: top;">Contact Method</label>
+                    <input type="checkbox" id="e-mail" name="e-mail" ng-model="user.mail" value="e-mail">
+                    <label for="e-mail" style="width: auto;">Email</label>
+                    <input type="checkbox" id="text" name="text" ng-model="user.text" value="text">
+                    <label for="text" style="width: auto;">Text messaging</label>
+                    <input type="checkbox" id="chat" name="chat" ng-model="user.chat" value="chat">
+                    <label for="chat" style="width: auto;">In-app chat</label>
+                </fieldset>
+                <div style="padding:20px;"></div>
+                <div style="text-align: center;">
+                    <input type="submit" value="Submit your information" class="btn btn-primary" ng-disabled="visitorForm.$invalid" ng-click="submitinfo()">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div style="padding:20px;"></div>
