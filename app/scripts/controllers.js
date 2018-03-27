@@ -189,7 +189,6 @@ routerApp.controller('HomeController', ['$scope', 'photoFactory', function($scop
 .controller('KerryParkController', ['$scope', 'kerryparkFactory', function($scope, kerryparkFactory) {
     $scope.nextButton = false
     $scope.previousButton = true;
-    $scope.photo = kerryparkFactory.getPhoto(0);
     //create a photo slideshow
     $scope.photos = kerryparkFactory.getPhotos();
     var length = $scope.photos.length;
@@ -243,7 +242,6 @@ routerApp.controller('HomeController', ['$scope', 'photoFactory', function($scop
 .controller('GasWorksParkController', ['$scope', 'gasworksparkFactory', function($scope, gasworksparkFactory) {
     $scope.nextButton = false
     $scope.previousButton = true;
-    $scope.photo = gasworksparkFactory.getPhoto(0);
     //create a photo slideshow
     $scope.photos = gasworksparkFactory.getPhotos();
     var length = $scope.photos.length;

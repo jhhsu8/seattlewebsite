@@ -156,12 +156,12 @@ routerApp
   .service("kerryparkFactory", function() {
     var photos = [
       {
-        id: 1,
+        id: 0,
         name: "Kerry Park",
         image: "../images/kerrypark.jpg"
       },
       {
-        id: 2,
+        id: 1,
         name: "The Changing Form sculpture",
         image: "../images/kerrypark1.jpg"
       }
@@ -171,20 +171,17 @@ routerApp
     this.getPhotos = function() {
       return photos;
     };
-    this.getPhoto = function(index) {
-      return photos[index];
-    };
   })
 
   .service("gasworksparkFactory", function() {
     var photos = [
       {
-        id: 1,
+        id: 0,
         name: "Gas Works Park",
         image: "../images/gasworkspark1.jpg"
       },
       {
-        id: 2,
+        id: 1,
         name: "A picnic day at Gas Works Park",
         image: "../images/gasworkspark.jpg"
       },
@@ -194,9 +191,6 @@ routerApp
     // implement two functions, getPhotos and getPhoto(index)
     this.getPhotos = function() {
       return photos;
-    };
-    this.getPhoto = function(index) {
-      return photos[index];
     };
   })
 
