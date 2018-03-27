@@ -171,6 +171,9 @@ routerApp
     this.getPhotos = function() {
       return photos;
     };
+    this.getPhoto = function(index) {
+      return photos[index];
+    };
   })
 
   .service("gasworksparkFactory", function() {
@@ -191,6 +194,9 @@ routerApp
     // implement two functions, getPhotos and getPhoto(index)
     this.getPhotos = function() {
       return photos;
+    };
+    this.getPhoto = function(index) {
+      return photos[index];
     };
   })
 
